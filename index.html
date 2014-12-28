@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="tShoot" ng-strict-di lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +7,14 @@
     <title>Troubleshooting SPA</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/myapp.css" rel="stylesheet">
 
     <!-- Angular -->
     <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/angular-route.js"></script>
     <script type="text/javascript" src="js/tShoot.js"></script>
+
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,19 +23,21 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body  ng-controller="UrlController as url">
-  <div class="panel">
-  <form name="broke Form">
-    <h1>Enter the URL</h1>
-    <input ng-model="url.site" type="url" />
-    <input type="submit" value="Submit" />
-    <blockquote>
-      <b>URL: {{url.site}}</b>
-    </blockquote>
-    </form>
+  <body  ng-app="myApp">
+<div ng-controller="weatherCtrl">
+<form>
+<input type="number" ng-model="zip">
+<input type="submit" value="Search" ng-click="findWeather(zip)">
+</form>
+<p ng-show="zip" > I'm going to show you info for {{zip}}</p>
+  <h1>Let's see the weather in {{ place.location.city}}</h1>
+   <h2>Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}&deg; <img src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif"/></h2>
+          <div class="forecast" ng-repeat="forecast in place.item.forecast">
+            <p><img src="http://l.yimg.com/a/i/us/we/52/{{forecast.code}}.gif"/><strong>{{ forecast.date }}</strong> – {{ forecast.text }}</p>
+            <p>H: {{ forecast.high }}&deg; | L: {{ forecast.low }}&deg;</p>
+          </div>
   </div>
-    
-
+  </div>
  
   </body>
 </html>
