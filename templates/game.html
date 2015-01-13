@@ -1,0 +1,18 @@
+
+<h4>Hey {{username}}, what kinds of words should we try?</h4>
+<hr>
+<div class="sections">
+    <ul>
+        <li ng-repeat="area in catagoryArray">
+            <label>
+                <input type="checkbox" ng-model="area.on">{{area.area}}
+            </label>
+        </li>
+    </ul>
+</div>
+<hr>
+<ul>
+    <li ng-repeat="word in words | filter:myFunc | orderBy:random">{{word.name}}
+        <button ng-audio="audio/{word.catagory}.mp3">Check</button>
+    </li>
+</ul>
