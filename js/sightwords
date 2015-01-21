@@ -1,0 +1,158 @@
+ var app = angular.module("Sight", []);
+
+ app.controller('WordController', function(){
+ 	this.blocks = words;
+ })
+ 
+ var words = [
+ {
+ 	name: 'a',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'am',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'and',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'are',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'at',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'can',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+  {
+ 	name: 'do',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'for',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'go',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'have',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'he',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+    {
+ 	name: 'here',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'I',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'is',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'it',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'like',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+    {
+ 	name: 'look',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'me',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'my',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'no',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'play',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'said',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'see',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'she',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'the',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+    {
+ 	name: 'to',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'up',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'we',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'will',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+   {
+ 	name: 'you',
+ 	sound: "audio/test.mp3"
+ 	quarter: 1
+  },
+  ];

@@ -20,7 +20,24 @@ app.factory('weatherService', ['$http', '$q', function ($http, $q){
       };
     }]);
 
-
+app.factory('movieService', ['$http', '$q', function ($http, $q){
+       function getMovie (zip) {
+        var deferred = $q.defer();
+        $http.get('http://api.fandango.com/v1/?op=performancesbypostalcodesearch&postalcode=' + zip + '&apikey=x4ax69webgaavju7whffs8d&sig=8e57108d44141f0813edd33e40d3ed3cb841691fcc47c5419bb85546b788cb3a')
+          .success(function(data){
+            deferred.resolve(data.query.results.channel);
+          })
+          .error(function(err){
+            console.log('Error retrieving markets');
+            deferred.reject(err);
+          });
+        return deferred.promise;
+      }
+      
+      return {
+        getWeather: getWeather
+      };
+    }]);
 
  app.controller('weatherCtrl', ['$scope', 'weatherService', function($scope, weatherService) {
       function fetchWeather(zip) {
@@ -38,7 +55,3 @@ app.factory('weatherService', ['$http', '$q', function ($http, $q){
     }]);
 
 
-
-
-
- 	

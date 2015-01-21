@@ -1,4 +1,9 @@
+.flex {
+	display:flex;
+}
+
 .forecast {
 	flex:inline-flex;
-	
+	width: 11em;
+
 }

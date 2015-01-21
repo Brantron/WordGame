@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
 
-</body>
-</html>
+<input type="checkbox" ng-model="checked">
+<audio controls>
+    <source ng-src="{{word_Q.sound}}" type="audio/mp3">
+</audio>
+<li ng-model="question">{{word_Q.name}}</li>
+</div>
+<ul>
+    <li ng-repeat="word in words | limitTo:3" ng-click ="checkWord(word, word_Q)">{{word.name}}<input type="submit">
+    </li>
+</ul>

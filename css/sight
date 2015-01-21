@@ -1,0 +1,3 @@
+.sections ul li{
+	display: inline;
+}
